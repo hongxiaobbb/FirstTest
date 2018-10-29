@@ -40,7 +40,9 @@ def upload_files():
             print(os.path)
             print(app.config['UPLOAD_FOLDER'])
             print(filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            newName = app.config['UPLOAD_FOLDER'] + '\\' + filename
+            file.save(newName)
+            # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # return render_template("upload.html")
         #return redirect(url_for('upload_files', filename=filename))
 
