@@ -37,6 +37,7 @@ def upload_files():
         uploaded_files = request.files.getlist("file[]")
         for file in uploaded_files:
             filename = (file.filename)
+            print(os.path)
             file.save(os.path.joinsecure_filename(app.config['UPLOAD_FOLDER'], filename))
         # return render_template("upload.html")
         #return redirect(url_for('upload_files', filename=filename))
