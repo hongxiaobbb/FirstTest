@@ -62,6 +62,8 @@ application = tornado.web.Application([
 
 ], debug=True,**settings)
 
+app = application
+
 
 
 print ("Server started.")
