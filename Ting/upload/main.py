@@ -8,6 +8,7 @@ Created on Fri Oct 19 21:24:07 2018
 import tornado.httpserver, tornado.ioloop, tornado.options, tornado.web, os.path, random, string
 import socket
 import os
+import tornado.wsgi
 
 DOMAIN = '.dir.slb.com'
 
@@ -64,7 +65,6 @@ application = tornado.web.Application([
 
 app = application
 app = tornado.wsgi.WSGIAdapter(app)
-
 
 
 print ("Server started.")
