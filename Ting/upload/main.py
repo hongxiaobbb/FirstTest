@@ -63,6 +63,7 @@ application = tornado.web.Application([
 ], debug=True,**settings)
 
 app = application
+app = tornado.wsgi.WSGIAdapter(app)
 
 
 
